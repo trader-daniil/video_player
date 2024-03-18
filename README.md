@@ -92,3 +92,8 @@ JS код поставляется в виде одного файла `player.j
   <div class="js-progress-slider" style="background-color: red;">Прогресс</div>
 </div>
 ```
+
+
+## Ссылка на проект
+
+Проверить работоспособность можно перейдя по [ссылка](https://trader-daniil.github.io/video_player/video_player.html)
