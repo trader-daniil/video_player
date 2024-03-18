@@ -9,27 +9,23 @@
       width: 800px;
       height: 600px;
       box-shadow: 0 0 10px rgba(0,0,0,1);
+      display: flex;
+      flex-direction: column;
     }
     .video-container {
-      width: 100%;
-      height: 100%;
+      flex-grow: 1;
     }
     .background-container {
       background-color: black;
+      flex-grow: 0;
     }
-    .play-button {
+    .interface-button {
       border-style:none;
       margin: 2px;
       cursor: pointer;
       color: white;
-      background-color: rgba(0,0,0,.5);
-    }
-    .pause-button {
-      border-style:none;
-      margin: 2px;
-      cursor: pointer;
-      color: white;
-      background-color: rgba(0,0,0,.5);
+      background-color: rgba(0,0,0,0.5);
+      font-size: 100%
     }
   </style>
 </head>
@@ -37,14 +33,21 @@
   <div id="player" class="player">
     <div class="js-video-container video-container"></div>
     <div class="background-container">
-    <button class="js-play-button play-button" hidden>
-      <i class="fa fa-play" aria-hidden="true"></i>
-    </button>
-    <button class="js-pause-button pause-button" hidden>
-      <i class="fa fa-pause" aria-hidden="true"></i>
-    </button>
+      <button class="js-play-button interface-button" hidden>
+        <i class="fa fa-play" aria-hidden="true"></i>
+      </button>
+      <button class="js-pause-button interface-button" hidden>
+        <i class="fa fa-pause" aria-hidden="true"></i>
+      </button>
+      <button class="js-mute-button interface-button" hidden>
+        <i class="fa fa-volume-up" aria-hidden="true"></i>
+      </button>
+      <button class="js-volume-button interface-button" hidden>
+        <i class="fa fa-volume-off" aria-hidden="true"></i>
+
+      </button>
   </div>
-  </div>
+    </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
   <script src="player.js"></script>
