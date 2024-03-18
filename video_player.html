@@ -17,7 +17,6 @@
     }
     .background-container {
       background-color: black;
-      flex-grow: 0;
     }
     .interface-button {
       border-style:none;
@@ -33,21 +32,24 @@
 <body>
   <div id="player" class="player">
     <div class="js-video-container video-container"></div>
-    <div class="background-container">
-      <button class="js-play-button interface-button" hidden>
+    <div class="background-container" style="display: flex;">
+      <button class="js-play-button interface-button" style="flex-grow: 0;">
         <i class="fa fa-play" aria-hidden="true"></i>
       </button>
-      <button class="js-pause-button interface-button" hidden>
+      <button class="js-pause-button interface-button" hidden style="flex-grow: 0;">
         <i class="fa fa-pause" aria-hidden="true"></i>
       </button>
-      <button class="js-mute-button interface-button" hidden>
+      <button class="js-mute-button interface-button" hidden style="flex-grow: 0;">
         <i class="fa fa-volume-up" aria-hidden="true"></i>
       </button>
-      <button class="js-volume-button interface-button" hidden>
+      <button class="js-volume-button interface-button" hidden style="flex-grow: 0;">
         <i class="fa fa-volume-off" aria-hidden="true"></i>
-
       </button>
-  </div>
+      <div style="flex-grow: 1;"></div>
+      <button class="js-fullscreen-button interface-button" style="flex-grow: 0;">
+        <i class="fa fa-expand" aria-hidden="true"></i>
+      </button>
+    </div>
     </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
