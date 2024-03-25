@@ -5,7 +5,15 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <style type="text/css">
+    .roboto-regular {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
     .vp-player {
       width: 800px;
       height: 604px;
@@ -54,6 +62,11 @@
       <button class="js-volume-button vp-player__interface-button" hidden">
         <i class="fa fa-volume-off" aria-hidden="true"></i>
       </button>
+      <div style="color: white;">
+        <span class="js-current-time roboto-regular"></span>
+        —
+        <span class="js-duration roboto-regular"></span>
+      </div>
       <div class="blank-div"></div>
       <button class="js-fullscreen-button vp-player__interface-button">
         <i class="fa fa-expand" aria-hidden="true"></i>
