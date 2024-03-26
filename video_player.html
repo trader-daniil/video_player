@@ -41,9 +41,38 @@
       margin: 5px;
       flex-grow: 0;
     }
-    .blank-div {
+    .vp-player__progress__div {
       flex-grow: 1;
+      background-color: black;
+      display: flex;
+      align-items: center;
     }
+    .vp-player__progress__slider {
+      background-color: red;
+      border-radius: 10px;
+      height: 5px;
+      margin: 11px;
+      margin-right: -14px;
+
+    }
+    .dot {
+      height: 9px;
+      width: 9px;
+      background-color: red;
+      border-radius: 50%;
+      display: inline-block;
+      border-color: white;
+      border-style: solid;
+      border-width: 3px;
+    }
+    .vp-player__time {
+      color: white;
+      margin-right: 10px;
+    }
+    .vp-player__duration {
+      color: white;
+    }
+
   </style>
 </head>
 <body>
@@ -62,12 +91,16 @@
       <button class="js-volume-button vp-player__interface-button" hidden">
         <i class="fa fa-volume-off" aria-hidden="true"></i>
       </button>
-      <div style="color: white;">
+      <div class="vp-player__time">
         <span class="js-current-time roboto-regular"></span>
-        —
+      </div>
+      <div class="js-progress vp-player__progress__div">
+        <div class="js-progress-slider vp-player__progress__slider"></div>
+        <span class="js-progress dot"></span>
+      </div>
+      <div class="vp-player__duration">
         <span class="js-duration roboto-regular"></span>
       </div>
-      <div class="blank-div"></div>
       <button class="js-fullscreen-button vp-player__interface-button">
         <i class="fa fa-expand" aria-hidden="true"></i>
       </button>
